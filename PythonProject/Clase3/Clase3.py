@@ -1,16 +1,16 @@
-"""#1. Longitud de una cadena
+""""#1. Longitud de una cadena
 import random
 from collections.abc import Reversible
 from dataclasses import replace
 """
-nombre = "Rubén López"
+"""nombre = "Rubén López"
 print("Longitud del nombre: ", len (nombre))
 
 """
 #2. Convertir texto a mayúsculas y minúsculas
 #upper"""
 
-print("Esto sale en mayusculas: ", nombre.upper())
+"""print("Esto sale en mayusculas: ", nombre.upper())
 #lower
 print("ESTO ES EN MINUSCULAS: ", nombre.lower())
 
@@ -74,7 +74,7 @@ print("Precio con dos decimales: {:.2f}".format(precio))
 
 print("Esto es el código ASCII de 'A': ", ord('A'))
 
-""""
+"""
 #11. Elevar al cuadrado y al cubo
 """
 
@@ -94,7 +94,7 @@ numerito = 100
 raiz = math.sqrt(numerito)
 print("Raiz cuadrada de 100: ", raiz )
 
-""""
+"""
 #13. Divisioes enteras y resto
 """
 
@@ -108,7 +108,7 @@ print("Resto: ", 10%3)
 
 #print("Número aleatorio entre 1 y 10: ") random.randint(1,10)
 
-""""
+"""
 #15. Convertir numeros a cadenas y viceversa.
 """
 numerajo = 300
@@ -118,21 +118,22 @@ print("Convertido a texto, soy: ", texto)
 print (type(texto))
 """
 #Lo siguiente da error
-cadena = "200"
+"""cadena = "200"
 numerajo = int(cadena)
 print("Convertido a numero soy: ", numerajo)
 print(numerajo+texto
 
 #16. Redondear hacia arriba
 """
+"""
 print("Redondeo ahia arriba 3.2: ", math.ceil(3.6))
 print("Redondero hacia abajo del numero 3.2", math.floor(3.2))
-
+"""
 """
 #17. Convertir una lista en un conjunto, es decir, eliminar duplicados.
 """
 
-numeroides = [1, 2, 3, 3, 4, 5, 5]
+"""numeroides = [1, 2, 3, 3, 4, 5, 5]
 sin_duplicados = set(numeroides)
 print("La lista de numeroides sin duplicados es: ", sin_duplicados)
 
@@ -142,14 +143,14 @@ print("La lista de numeroides sin duplicados es: ", sin_duplicados)
 
 print("Money!"*3)
 
-""""
+"""
 #19. El tipo de dato
 """
 
 dato = 3.14
 print("El tipo de dato es: ", type(dato))
 
-""""
+"""
 #20. Combinar cadenas y variables en un print
 """
 
@@ -158,12 +159,14 @@ edad = 32
 print(f"Hola, soy {name} y tengo {edad} años.")
 
 """
+"""
 Ejercicios
 1 Generador de nombres de usuario
 Pide al usuario su nombre y apellido.
 Genera un nombre de usuario en minúsculas, sin espacios.
 Añade un número aleatorio al final.
 Muestra el nombre de usuario generado.
+"""
 """
 import random
 
@@ -209,12 +212,14 @@ print(f"Su USUARIO es: {nombreNoEspacio}{apellido2noEspacio}{apellido2noEspacio}
 
 
 """
+""""
 2️⃣ Analizador de frases
 Pide al usuario que ingrese una frase.
 Muestra la cantidad de caracteres de la frase.
 Indica si la frase contiene la palabra "Python".
 Convierte la frase a mayúsculas.
 Muestra la frase invertida.
+"""
 """
 
 print("Introduce una frase: ")
@@ -234,14 +239,14 @@ else:
     frase_sep=frase.split()
     frase_sep.reverse()
     print(" ".join(frase_sep))
-
+"""
 """3️⃣ Cálculo de descuentos
 Pide al usuario el precio de un producto.
 Aplica un 15% de descuento.
 Muestra el precio final con dos decimales.
 Muestra el precio redondeado hacia arriba.
 """
-
+"""
 print("¿Cuanto cuestan estos pantalones?")
 precio_pantalones  = int(input())
 float = precio_pantalones
@@ -258,13 +263,14 @@ precio_redondeo = math.ceil(precio_oferta_pantalones_dos_dec)
 print(f"El precio de {precio_oferta_pantalones_dos_dec} lo redondeo hacia arriba hasta {precio_redondeo}")
 
 """
+"""
 4️⃣ Generador de etiquetas de productos
 Pide el nombre de un producto y su precio.
 Convierte el nombre del producto a mayúsculas.
 Muestra el precio con dos decimales.
 Genera un código basado en el valor ASCII de la primera letra del producto.
 """
-
+"""
 def productos ():
     producto = input("Dime nombre del producto: ")
     price = int(input("Pon el precio"))
@@ -277,14 +283,14 @@ def productos ():
     print(f"Producto: {producto_mayusculas} Precio: {precio_dos_dec} € Codigo: {codigo}")
 productos()
 
-
+"""
 """5️⃣ Conversión de tipos y manipulación de listas
 Pide al usuario una lista de números separados por comas.
 Convierte cada número a entero.
 Elimina los números repetidos.
 Muestra la lista ordenada sin duplicados.
 """
-
+"""
 print("Escribe una lista de numeros separados por comas #,#: ")
 lista = input().split(",")
 lista_ent = [int(x) for x in lista]
@@ -292,13 +298,13 @@ lista_sin_duplicados = set(lista_ent)
 lista_ordenada = sorted(lista_sin_duplicados)
 print(f"Ahí tienes tu lista ordenada y sin duplicados: {lista_ordenada}")
 
-
+"""
 """
 6️⃣ Creación de mensajes personalizados
 Pide al usuario su nombre, edad y ciudad.
 Muestra un mensaje con toda la información.
 Si la edad es menor de 18, redondea hacia arriba hasta la mayoría de edad. """
-
+"""
 print("¿Cual es tu nombre ?")
 nombre_ejer6 = input()
 
@@ -312,13 +318,13 @@ print(f"Tus datos son los siguientes nombre:{nombre_ejer6}, edad:{edad_ejer6} y 
 if edad_ejer6 < 18:
     edad_ejer6 = 18
     print(f"En esta frase tu edad pasa a ser:{edad_ejer6}")
-
+"""
 """7️⃣ Generador de contraseñas aleatorias
 Pide al usuario su nombre.
 Genera una contraseña segura con la primera letra en mayúscula, un número aleatorio y un símbolo especial.
 Muestra la contraseña generada.
 """
-
+"""
 print("Vamos a proporcionarte tu contraseña personal, ¿Cual es tu  nombre?")
 nombre_contra = input().upper()
 especial_caracter =["|","@","#","$","&",]
@@ -327,13 +333,13 @@ aleatorio_numero = random.randint(1,999)
 contra_segura = (f"{nombre_contra[0]}{aleatorio_numero}{especial}")
 print(f"Esta es tu contraseña segura: {contra_segura}")
 
-
+"""
 """8️⃣ Verificación de nombres en listas
 Pide al usuario su nombre.
 Verifica si su nombre está en una lista de invitados predefinida.
 Si está en la lista, muestra su posición.
 """
-
+""""
 list = ["ROBERTO", "ELADIO", "SATURNINO", "LORETO", "MACARENA"]
 
 print("Dime tu nombre: ")
@@ -345,14 +351,14 @@ if nome_in in list:
     print(f"El nombre {nome_in} esta en la lista en la posición {posicion_lista}")
 else:
     print("El nombre no aparece en la lista.")
-
+"""
 """9️⃣ Manipulación de nombres
 Pide al usuario su nombre y apellido.
 Convierte el nombre a minúsculas y el apellido a mayúsculas.
 Genera un alias combinando las primeras 3 letras del nombre y del apellido.
 Muestra el alias generado.
 """
-
+"""
 print("Dime tu nombre: ")
 usuario_nombre = input().lower()
 
@@ -372,14 +378,14 @@ usuape1_o=usuape1_i.replace("Ó","O")
 usuape1_u_final=usuape1_o.replace("Ú","U")
 
 print(f"Alias: {usunom_u_final[:3]}{usuape1_u_final[:3]}")
-
+"""
 """🔟 Formatear y mostrar datos matemáticos
 Pide al usuario un número decimal.
 Muestra el número redondeado a dos decimales.
 Calcula y muestra su cuadrado.
 Calcula y muestra su raíz cuadrada.
 """
-
+""""
 print("Escribe un número decimal: ")
 
 numero_decimal = float(input())
@@ -389,3 +395,4 @@ print(f"Numero redondeado a dos decimales: {round(numero_decimal,2)}")
 print(f"El cuadrado de:  {round(numero_decimal,2)} es:  {(round(numero_decimal,2))**2}")
 
 print(f"La raiz cuadrada de: {round(numero_decimal,2)} es: {(round(numero_decimal,2))**0.5}")
+"""

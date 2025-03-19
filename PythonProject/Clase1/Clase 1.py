@@ -1,4 +1,4 @@
-print("Hola Mundo!")
+"""print("Hola Mundo!")
 
 nombre = "Rubén L."         #String
 edad = 41                   #Entero o también llamado int
@@ -43,3 +43,4 @@ print("Aquí el valor de la multiplicación", multiplicacion)
 print("Aquí el valor de la división", division)
 print("Aquí el valor de la dicisión entera", division_entera)
 print("Aquí el valor del módulo", modulo)
+"""
