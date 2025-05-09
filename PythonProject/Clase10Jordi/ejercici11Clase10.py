@@ -88,10 +88,52 @@ for i in range(1, numero_h+1,1):
 print()
 
 """Ejercicio 17¶
-Escribe un programa que reciba un número entero positivo y una letra. El programa debe imprimir la letra tantas veces como el número introducido."""
+Escribe un programa que reciba un número entero positivo y una letra. El programa debe imprimir la letra tantas veces 
+como el número introducido."""
 
 numero_j = int(input("Escribe un número positivo (Ej:17): "))
 letra = str(input("Escribe una letra: "))
 
 for i in range (1, numero_j+1,1):
     print(letra, end=", ")
+
+"""Ejercicio 18¶
+Escribe un programa que dado una serie de números introducidos por el usuario, hasta que introduzca un -1, imprima el 
+número introducido sumándole 1. El programa debe imprimir todos los números introducidos, menos el -1, sumándoles 1."""
+
+numero = int(input("\n Ejer18. Introduce un número entero (-1 para salir): "))
+
+while numero != -1:
+    numero_nuevo = numero+1
+    print(f"El número {numero} sumándole uno da como resultado {numero_nuevo}")
+    numero = int(input("Introduce un nuevo número pon -1 para salir"))
+
+"""Ejercicio 19¶
+Escribe un programa que dado una serie de notas introducidas por el usuario, hasta que introduzca un -1, imprima el número 
+de notas correctas introducidas, la media de las notas y cuantas de estas notas son 10. El programa debe imprimir la 
+media de todas las notas introducidas, menos el -1."""
+
+nota = int(input("\n Escribe una nota válida entre 0 y 10 (-1 para salir): "))
+
+total_notas = 0
+suma_notas = 0
+sobresalientes = 0
+
+while nota != -1:
+    if 0 <= nota <= 10:
+        total_notas += 1
+        suma_notas = suma_notas + nota
+        if nota == 10:
+            sobresalientes += 1
+    else:
+        print("Nota inválida. Debe estar entre 0 y 10.")
+
+    nota = int(input("Escribe otra nota (-1 para salir): "))
+
+if total_notas > 0:
+    media = suma_notas / total_notas
+    print(f"\nHas introducido {total_notas} notas válidas.")
+    print(f"La nota media es {media:.2f}.")
+    print(f"Has sacado un 10 en {sobresalientes} ocasión(es).")
+else:
+    print("No se han introducido notas válidas.")

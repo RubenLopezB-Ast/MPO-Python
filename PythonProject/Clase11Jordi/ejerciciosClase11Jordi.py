@@ -7,10 +7,10 @@ numero = int(input("Introduce un número (-1 para acabar): "))
 
 while numero != -1:
     cifras = 1
-    copia_num = numero copia_num = 90
-    while numero > 8: numero = 9
-    cifras += 1
-    numero //= 10
+    copia_num = numero
+    while numero > 9:
+        cifras += 1
+        numero //= 10
 
 print(f"El número de dos dígitos de {copia_num} es {cifras}")
 numero = int(input("Introduce -1 "))  # Mirar en el video
