@@ -137,3 +137,49 @@ if total_notas > 0:
     print(f"Has sacado un 10 en {sobresalientes} ocasión(es).")
 else:
     print("No se han introducido notas válidas.")
+
+"""Ejercicio 20¶
+Escribe un programa que dado una serie de números introducidos por el usuario, hasta que introduzca un -1, cuente 
+cuántos de estos números son pares y cuántos son impares. El programa debe imprimir el número de pares e impares introducidos, menos el -1."""
+pares = 0
+impares = 0
+
+while True:
+    numeros = int(input("\n Escribe números enteros (-1 para salir): "))
+    if numeros == -1:
+        break
+    if numeros % 2 == 0:
+        pares = pares +1
+    else:
+        impares = impares + 1
+print(f"Hay {pares} números pares.")
+print(f"Hay {impares} números impares.")
+
+"""Ejercicio 21¶
+Escribe un programa que te introduzca un número entero positivo que corresponde al número de casos a tratar. 
+Seguidamente te introducen un número entero positivo que corresponde a una serie de números. Después debes recibir ese 
+total de números e imprimirlos en la misma linea de la terminal, separados por un espacio y habiéndoles sumado 1 a cada 
+uno de ellos."""
+
+numero_casos = int(input("Introduce el número de casos a tratar: "))
+for _ in range(numero_casos):
+    numeros = int(input("Números a introducir: "))
+    for _ in range(numeros):
+        numero = int(input())
+        print(int(numero) + 1, end=" ")
+    print()
+
+"""Ejercicio 22¶
+Escribe un programa que inicialmente te indique el número de casos a tratar. Después, para cada caso, te introduzca un 
+número entero positivo del qual debes imprimir todos los divisores. Un divisor de un número n es un número entero que 
+divide a n sin dejar residuo. El programa debe imprimir todos los divisores del número introducido en una sola línea, 
+separados por espacios."""
+
+casos = int(input("Introduce el número de casos: "))
+for _ in range(casos):
+    numero = int(input("Introduce un número entero positivo: "))
+    print(f"Los divisores de {numero} son: ", end=" ")
+    for i in range(1, numero + 1):
+        if numero % i == 0:
+            print(i, end=" ")
+    print()
