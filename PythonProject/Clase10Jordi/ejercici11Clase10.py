@@ -7,7 +7,7 @@ Ejemplo:
 El usuario introduce 2 y 5.
 
 El programa debe imprimir:"""
-
+from weakref import finalize
 
 numero_a = int(input("Introduce un número entero: "))
 numero_b = int(input("introduce un numero entero mayor que el número anterior: "))
@@ -183,3 +183,51 @@ for _ in range(casos):
         if numero % i == 0:
             print(i, end=" ")
     print()
+
+    """Ejercicio 23¶
+Escribe un programa que vaya recibiendo cadenas de texto hasta que el usuario introduzca "fin". El programa debe contar 
+cuántas vocales se han introducido e imprimir el resultado. Las vocales son: a, e, i, o, u (tanto mayúsculas como 
+minúsculas). El programa debe imprimir el número total de vocales introducidas sin contar la palabra "fin"."""
+
+"""Jordi"""
+contador_vocales = 0
+
+while True:
+    cadena = input("Introduce una cadena de texto (o 'fin' para salir): ")
+    if cadena.lower() == "fin":
+        break
+    for letra in cadena:
+        if letra.lower() in "aeiou":
+            contador_vocales += 1
+
+print(f"Número total de vocales: {contador_vocales}")
+
+letra_a = 0
+letra_e = 0
+letra_i = 0
+letra_o = 0
+letra_u = 0
+while True:
+    letras = (input("\nIntroduce texto (pon fin para finalizar)"))
+    if letras.lower() == "fin":
+        break
+    for letra_a in letras:
+        if letra_a.lower() in "a":
+            letra_a = letra_a + 1
+    for letra_e in letras:
+        if letra_e.lower() in "e":
+            letra_e = letra_e +1
+    for letra_i in letras:
+        if letra_i.lower() in "i":
+            letra_i = letra_i +1
+    for letra_o in letras:
+        if letra_o.lower() in "o":
+            letra_o =  letra_o +1
+    for letra_u in letras:
+        if letra_u.lower() in "u":
+            letra_u = letra_u +1
+
+vocales_total = letra_a + letra_e + letra_i + letra_o + letra_u
+
+print(f"El número de a es: {letra_a}, el número de e es: {letra_e}, el número de i es: {letra_i}, el número de o es: {letra_o}"
+      f", el número de u es: {letra_u}. Y el total de vocales introducidas es: {vocales_total}.")
