@@ -231,3 +231,13 @@ vocales_total = letra_a + letra_e + letra_i + letra_o + letra_u
 
 print(f"El número de a es: {letra_a}, el número de e es: {letra_e}, el número de i es: {letra_i}, el número de o es: {letra_o}"
       f", el número de u es: {letra_u}. Y el total de vocales introducidas es: {vocales_total}.")
+
+"""Ejercicio 24¶
+Escribe un programa que reciba un número n entero positivo y que escriba esta secuencia de números: un uno, dos doses, 
+tres treses... hasta n enes. Por ejemplo, si el usuario introduce 5, el programa debe imprimir:"""
+
+n = int(input("Introduce un número entero positivo: "))
+for i in range (1,n+1):
+    for j in range (i):
+        print(i, end="")
+print()
